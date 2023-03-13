@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loop Studio</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="wrapper">
+        <nav>
+          <img src="./images/logo.svg" alt="Loopstudios logo" />
+
+          <div class="menuToggler">
+            <img
+              class="hamburger active"
+              src="./images/icon-hamburger.svg"
+              alt="Menu button"
+            />
+            <img
+              class="close"
+              src="./images/icon-close.svg"
+              alt="Menu button"
+            />
+          </div>
+
+          <ul class="navLinkWrapper">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </nav>
+
+        <div class="slogan active">
+          <h1>Immersive experiences that deliver</h1>
+        </div>
+      </div>
+    </section>
+    <!-- WHO WE ARE -->
+    <section class="whoWeAre">
+      <div class="wrapper">
+        <img src="./images/desktop/image-interactive.jpg" alt="" />
+        <div class="textContent">
+          <h1>THE LEADER IN INTERACTIVE VR</h1>
+          <p>
+            Founded in 2011, Loopstudios has been producing world-class virtual
+            reality projects for some of the best companies around the globe.
+            Our award-winning creations have transformed businesses through
+            digital experiences that bind to their brand.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Gallary Info -->
+    <section class="gallary">
+      <div class="gallaryInfo">
+        <h1>Our Creations</h1>
+        <button>SEE ALL</button>
+      </div>
+
+      <div class="gallaryWrapper">
+        <div class="imgWrapper deepEarth">
+          <a href="#">
+            <img
+              src="./images/desktop/image-deep-earth.jpg"
+              alt="Image of earth from outerspace"
+            />
+          </a>
+          <h1>
+            DEEP<br />
+            EARTH
+          </h1>
+        </div>
+        <div class="imgWrapper nightArcade">
+          <a href="#">
+            <img
+              src="./images/desktop/image-night-arcade.jpg"
+              alt="Image of an arcade machine"
+            />
+          </a>
+          <h1>
+            NIGHT<br />
+            ARCADE
+          </h1>
+        </div>
+        <div class="imgWrapper soccerTeam">
+          <a href="#">
+            <img
+              src="./images/desktop/image-soccer-team.jpg"
+              alt="Image of a player playing soccer"
+            />
+          </a>
+          <h1>
+            SOCCER<br />
+            TEAM VR
+          </h1>
+        </div>
+        <div class="imgWrapper theGrid">
+          <a href="#">
+            <img
+              src="./images/desktop/image-grid.jpg"
+              alt="Image of a sports car"
+            />
+          </a>
+          <h1>
+            THE<br />
+            GRID
+          </h1>
+        </div>
+        <div class="imgWrapper fromUpAbove">
+          <a href="#">
+            <img
+              src="./images/desktop/image-from-above.jpg"
+              alt="Image of a road stretching on a hill"
+            />
+          </a>
+          <h1>
+            FROM UP<br />
+            ABOVE VR
+          </h1>
+        </div>
+        <div class="imgWrapper pocketBorealis">
+          <a href="#">
+            <img
+              src="./images/desktop/image-pocket-borealis.jpg"
+              alt="Image of an outerspace phenomenon"
+            />
+          </a>
+          <h1>
+            POCKET<br />
+            BOREALIS
+          </h1>
+        </div>
+        <div class="imgWrapper theCuriosity">
+          <a href="#">
+            <img
+              src="./images/desktop/image-curiosity.jpg"
+              alt="Image of a robot on mars"
+            />
+          </a>
+          <h1>
+            THE<br />
+            CURIOSITY
+          </h1>
+        </div>
+        <div class="imgWrapper makeItFisheye">
+          <a href="#">
+            <img
+              src="./images/desktop/image-fisheye.jpg"
+              alt="Weird camera style"
+            />
+          </a>
+          <h1>
+            MAKE IT<br />
+            FISHEYE
+          </h1>
+        </div>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <footer>
+      <div class="footerWrapper">
+        <div class="left links">
+          <img class="logo" src="./images/logo.svg" alt="Logo" />
+          <ul class="navLinkWrapper">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+
+        <div class="links right">
+          <ul class="navLinkWrapper socialMedia">
+            <li>
+              <a href="#"><img src="./images/icon-facebook.svg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./images/icon-twitter.svg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./images/icon-pinterest.svg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./images/icon-instagram.svg" alt="" /></a>
+            </li>
+          </ul>
+          <p>© 2021 Loopstudios. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- JAVASCRIPT -->
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const close = document.querySelector(".close");
+
+      close.addEventListener("click", switchMenuState);
+      hamburger.addEventListener("click", switchMenuState);
+
+      function switchMenuState() {
+        // Toggle Menu
+        hamburger.classList.toggle("active");
+        close.classList.toggle("active");
+        document.querySelector("ul").classList.toggle("active");
+
+        //toggle black background
+        document.querySelector(".hero").classList.toggle("active");
+
+        //toggle slogan
+        document.querySelector(".slogan").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
